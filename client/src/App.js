@@ -4,14 +4,15 @@ import { Container, AppBar, Typography, Grow, Grid } from '@mui/material';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import work from './images/work.jpg';
-
+import useStyles from './styles';
 
 function App() {
+  const classes = useStyles();
   return (
       <Container maxWidth='lg'>
-        <AppBar position='static' color='inherit'>
-          <Typography variant="h2" align="center">That Work In</Typography>
-          <img src={work} alt="That Work In" height="400"/>
+        <AppBar className={classes.appBar} position='static' color='inherit'>
+          <Typography className={classes.heading} variant="h2" align="center">That Work In</Typography>
+          <img className={classes.image} src={work} alt="That Work In" height="100"/>
         </AppBar>
         <Grow in>
           <Container>
