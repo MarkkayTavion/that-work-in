@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { TextField, Button, Typography, Paper } from "@material-ui/core"
-import useStyles from "./formStyles"
+import { TextField, Button, Typography, Paper } from "@material-ui/core";
+import FileBase from 'react-file-base64';
+import useStyles from "./formStyles";
 
 
 const Form = () => {
@@ -18,9 +19,13 @@ const Form = () => {
 
     }
 
+    const clear = () => {
+
+    }
+
     return (
         <Paper className={classes.paper}>
-            <form autoComplete="off" noValidate className={classes.form} onSubmit={handleSubmit}>
+            <form autoComplete="off" noValidate className={`${classes.root} ${classes.Form}`} onSubmit={handleSubmit}>
                 <Typography variant="h6">Show off that WORK</Typography>
                 <TextField 
                 name="creator" 
@@ -36,7 +41,7 @@ const Form = () => {
                 label="title" 
                 fullWidth
                 value={postData.creator}
-                onChange={(e) => setPostData({ ...postData, creator: e.target.value })}
+                onChange={(e) => setPostData({ ...postData, title: e.target.value })}
                  />
                  <TextField 
                 name="message" 
@@ -44,7 +49,7 @@ const Form = () => {
                 label="message" 
                 fullWidth
                 value={postData.creator}
-                onChange={(e) => setPostData({ ...postData, creator: e.target.value })}
+                onChange={(e) => setPostData({ ...postData, message: e.target.value })}
                  />
                  <TextField 
                 name="tags" 
@@ -52,8 +57,19 @@ const Form = () => {
                 label="tags" 
                 fullWidth
                 value={postData.creator}
-                onChange={(e) => setPostData({ ...postData, creator: e.target.value })}
+                onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
                  />
+                 <div className={classes.fileInput}>
+                    <FileBase 
+                        type="file"
+                        multiple={false}
+                        onDone={({base64}) => setPostData({ ...postData, selectedFile: base64 })}
+                    />
+                 </div>
+                 <Button className={classes.buttonSubmit} variant="container" color="success" size="large" type="submit" fullWidth>Submit
+                 </Button>
+                 <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear
+                 </Button>
             </form>
         </Paper>
     );
