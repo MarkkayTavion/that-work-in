@@ -1,8 +1,12 @@
 import * as api from '../api';
 
 //action creators retuning actions 
-const getPosts =() => {
-    const action = { type: 'Get_ALL', payload: [] }
+export const getPosts =() => async (dispatch) => {
+    try {
+        const { data } = await api.getPosts();
 
-    return action;
+        dispatch({ type: 'Get_ALL', payload: [] })
+    } catch (error) {
+        console.log(error.message);
+    } 
 }
