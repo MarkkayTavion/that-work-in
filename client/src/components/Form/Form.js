@@ -15,7 +15,7 @@ const Form = ({ currentId, setCurrentId }) => {
         tags: '',
         selectedFile: ''
     });
-    const post = useSelector((state) => currentId ? state.posts.find((p) => p._id == currentId) : null);
+    const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
     const classes = useStyles();
     const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
         <Paper className={classes.paper}>
             <form autoComplete="off" noValidate className={`${classes.root} ${classes.Form}`} onSubmit={handleSubmit}>
-                <Typography variant="h6">Show off that WORK</Typography>
+                <Typography variant="h6">${ currentId ? "Edit that WORK" : "Show off that WORK" }</Typography>
                 <TextField 
                 name="creator" 
                 variant="outlined" 
