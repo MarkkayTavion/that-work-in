@@ -1,4 +1,4 @@
-import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE, GET_ALL } from '../constants/actionConstants';
+import { CREATE, UPDATE, DELETE, LIKE, GET_ALL } from '../constants/actionConstants';
 
 
 
