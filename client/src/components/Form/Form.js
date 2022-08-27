@@ -23,18 +23,27 @@ const Form = ({ currentId, setCurrentId }) => {
         if(post) setPostData(post)
     }, [post])
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-        if(currentId) {
-            dispatch(updatePost(currentId, postData))
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        if (currentId === 0) {
+          dispatch(createPost(postData));
+          clear();
         } else {
-            dispatch(createPost(postData));
+          dispatch(updatePost(currentId, postData));
+          clear();
         }
-    }
+      };
 
     const clear = () => {
-
+        setCurrentId(0);
+        setPostData({ 
+            creator: '', 
+            title: '', 
+            message: '', 
+            tags: '', 
+            selectedFile: '' 
+        });
     }
 
     return (

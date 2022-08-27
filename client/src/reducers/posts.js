@@ -1,8 +1,6 @@
 import { CREATE, UPDATE, DELETE, LIKE, GET_ALL } from '../constants/actionConstants';
 
 
-
-
 export default (posts = [], action) => {
     switch (action.type) {
         case GET_ALL:

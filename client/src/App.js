@@ -22,7 +22,7 @@ function App() {
       <Container maxWidth='lg'>
         <AppBar className={classes.appBar} position='static' color='inherit'>
           <Typography className={classes.heading} variant="h2" align="center">That Work In</Typography>
-          <img className={classes.image} src={work} alt="That Work In" height="100"/>
+          <img className={classes.image} src={work} alt="icon" height="100"/>
         </AppBar>
         <Grow in>
           <Container>
