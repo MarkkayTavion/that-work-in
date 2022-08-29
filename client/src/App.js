@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import PostDetails from './components/PostDetails/PostDetails';
 import Navbar from './components/Nav/Navbar';
 import Home from './components/Home/Home';
@@ -14,14 +14,15 @@ const App = () => {
     <BrowserRouter>
       <Container maxWidth="xl">
         <Navbar />
-        <Switch>
-          <Route path="/" exact component={() => <Redirect to="/posts" />} />
-          <Route path="/posts" exact component={Home} />
-          <Route path="/posts/search" exact component={Home} />
-          <Route path="/posts/:id" exact component={PostDetails} />
-          <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
-          <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/posts" element={<Home />} />
+          <Route path="/posts/search" element={<Home />} />
+          <Route path="/posts/:id" element={<PostDetails />} />
+          <Route path="/tags/:name" element={<CreatorOrTag />} />
+          <Route path="/creators/:name" element={<CreatorOrTag />} />
+          {/* <Route path="/auth" component={() => (!user ? <Auth /> : <Home />)} /> */}
+        </Routes>
       </Container>
     </BrowserRouter>
   );
