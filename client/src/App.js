@@ -1,31 +1,23 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import PostDetails from './components/PostDetails/PostDetails';
-import Navbar from './components/Nav/Navbar';
-import Home from './components/Home/Home';
-import Auth from './components/Auth/Auth';
-import CreatorOrTag from './components/CreatorTag/CreatorTag';
+import { Route, Routes } from 'react-router-dom';
+import { Box } from '@mui/material';
 
-const App = () => {
-  const user = JSON.parse(localStorage.getItem('profile'));
+import './App.css';
+import ExerciseDetail from './pages/ExerciseDetail';
+import Home from './pages/Home';
+import Navbar from './components/Nabar';
+import Footer from './components/Footer';
 
-  return (
-    <BrowserRouter>
-      <Container maxWidth="xl">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/posts" element={<Home />} />
-          <Route path="/posts/search" element={<Home />} />
-          <Route path="/posts/:id" element={<PostDetails />} />
-          <Route path="/tags/:name" element={<CreatorOrTag />} />
-          <Route path="/creators/:name" element={<CreatorOrTag />} />
-          {/* <Route path="/auth" component={() => (!user ? <Auth /> : <Home />)} /> */}
-        </Routes>
-      </Container>
-    </BrowserRouter>
-  );
-};
+const App = () => (
+  <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/exercise/:id" element={<ExerciseDetail />} />
+    </Routes>
+    <Footer />
+  </Box>
+);
 
 export default App;
+
