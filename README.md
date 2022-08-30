@@ -51,6 +51,7 @@ As a user, I would like to receive suggestions on workouts that are specifically
 
 # Planning process
 
+https://github.com/MarkkayTavion/that-work-in/issues/1#issue-1356013069
 
 # Site Screenshots
 
