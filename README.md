@@ -26,6 +26,13 @@ Bcrypt
 Jwt-decode
 nodemon
 
+*Also*
+
+Cloudinary
+Google Login
+
+
+
 # User stories
 
 As a user, I would like to see an inspiring aesthetic
