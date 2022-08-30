@@ -54,11 +54,14 @@ As a user, I would like to receive suggestions on workouts that are specifically
 https://github.com/MarkkayTavion/that-work-in/issues/1#issue-1356013069
 
 # Site Screenshots
+![Screenshot from 2022-08-30 12-20-56](https://user-images.githubusercontent.com/66388320/187501159-6ec60467-9dc6-4a2c-aefd-d977f4d31a19.png)
+
+![Screenshot from 2022-08-30 12-21-18](https://user-images.githubusercontent.com/66388320/187501219-57eb64ff-8e9d-480f-b019-8eeaf5a5938c.png)
 
 ![Screenshot from 2022-08-30 12-21-34](https://user-images.githubusercontent.com/66388320/187501155-400cdd7b-f9a0-4048-8582-481da0567094.png)
-![Screenshot from 2022-08-30 12-20-56](https://user-images.githubusercontent.com/66388320/187501159-6ec60467-9dc6-4a2c-aefd-d977f4d31a19.png)
+
 ![Screenshot from 2022-08-30 12-21-46](https://user-images.githubusercontent.com/66388320/187501216-84e8adec-379b-470e-94af-39d51e6a5780.png)
-![Screenshot from 2022-08-30 12-21-18](https://user-images.githubusercontent.com/66388320/187501219-57eb64ff-8e9d-480f-b019-8eeaf5a5938c.png)
+
 
 
 
