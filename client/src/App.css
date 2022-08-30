@@ -1,73 +1,46 @@
 body {
-  font-family: 'Josefin Sans';
-  background-color: #312e2e;
+  background-color: #EEEEEE;
+  font-family: 'Poppins', sans-serif;
 }
 
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-
 }
 
 ::-webkit-scrollbar {
   width: 0px;
 }
 
-.right-arrow,
-.left-arrow {
-  cursor: pointer;
-  background: transparent;
-  outline: none;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #FF2625;
-  font-size: 25px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: -20px;
-  right: 80px;
-  transform: scale(1, 1);
-  transition: 0.3s all ease-in-out;
-}
-
-.right-arrow {
-  right: 140px;
-}
 
 .right-arrow:hover,
 .left-arrow:hover {
   transform: scale(1.3, 1.3);
 }
 
-.react-horizontal-scrolling-menu--wrapper {
+.react-horizontal-scrolling-menu {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
 .detail-image {
-  width: 729px;
-  height: 742px;
+  width: 60vw;
+  height: 90vh;
+  padding-left: 3rem ;
 }
 
-.main-image {
-  position: absolute;
-  right: 40px;
-  top: 0px;
-  width: 700px;
-  height: 900px;
-  margin-top: -330px;
-
+@media (max-width: 480px){
+  .detail-image{
+    padding-left: 0;
+  }
 }
 
 .exercise-card {
   width: 400px;
-  height: 445px;
-  background: rgb(189, 23, 23);
-  border-top: 4px solid #FF2625;
+  height: 450px;
+  background: #8B9A46;
   border-bottom-left-radius: 20px;
   text-decoration: none;
   display: flex;
@@ -75,11 +48,14 @@ body {
   flex-direction: column;
   padding-bottom: 10px;
   transform: scale(1, 1);
+  border-radius: 16px;
   transition: 0.3s all ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .exercise-card img {
-  height: 326px;
+  height: 300px;
+  border-radius: 16px;
 }
 
 .bodyPart-card {
@@ -93,8 +69,7 @@ body {
 }
 
 .search-btn:hover {
-  color: #FF2625 !important;
-  border: 1px solid #FF2625 !important;
+  color: #8B9A46 !important;
 }
 
 .exercise-video {
@@ -138,3 +113,139 @@ body {
     width: 280px;
   }
 }
+
+
+ /* NEWWWWW */
+
+.main-image {
+  max-width: 100vw;
+  min-width: 100vw;
+  padding-top: 2rem;
+  padding: 30px;
+}
+
+
+.link-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  color: #8B9A46;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  padding-left: 1.2rem;
+  padding-right: 1rem;
+}
+
+.link{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  padding-top: 1rem ;
+}
+
+.text-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+  max-width: 100%;
+  margin-left: 5.5rem;
+
+}
+
+.get-that-work{
+  padding-top: 3rem;
+  padding-left: 5rem;
+  padding-bottom: 1rem;
+  font-size: 10rem;
+  opacity: 70%;
+  color: #8B9A46;
+  font-family: 'Bebas Neue', cursive;
+}
+
+@media (max-width: 480px){
+  .get-that-work{
+    font-size: 4rem;
+    padding-left: 6rem;
+  }
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8B9A46;
+  opacity: 70%;
+  padding: 40px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 480px){
+  .footer-container{
+    font-size: 2rem;
+  }
+}
+
+.we-do{
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+@media (max-width: 480px){
+  .we-do{
+    font-size: 2rem;
+    margin-right: 5rem;
+  }
+}
+
+.green{
+  color: #8B9A46;
+}
+
+.learn{
+  margin-top: 4rem;
+  font-size: 1rem;
+  background-color: #8B9A46;
+  padding: 30px;
+  border-radius: 16px;
+  color: white;
+}
+
+.fitness-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 5rem;
+}
+
+
+.fitness{
+  width: 25vw;
+}
+
+@media (max-width: 480px){
+  .fitness{
+   width: 30vw;
+  }
+}
+
+.dumbell-icon{
+  height: 40px;
+  width: 40px;
+  color: #8B9A46;
+}
+
+.arrow{
+  height: 30px;
+  width: 30px;
+  color: #8B9A46;
+}
+

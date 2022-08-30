@@ -1,28 +1,24 @@
 import React from 'react';
-import { Box, Stack, Typography } from '@mui/material';
-import MainImage from "../assets/images/MainImage.jpg"
+import AFAAA from "../assets/images/png-transparent-nasm-afaa-principles-of-group-fitness-instruction-aerobics-and-fitness-association-of-america-logo-physical-fitness-national-academy-of-sports-medicine-flatiron-blue-physical-fitness-t.png"
+import NASM from "../assets/images/NASM+Provider+Logo.png"
+import ACE from "../assets/images/ace-removebg-preview.png"
+
 
 const HeroBanner = () => (
-  <Box sx={{ mt: { lg: '212px', xs: '70px' }, ml: { sm: '50px' } }} position="relative" p="20px">
-    <Typography color="#FF2625" fontWeight="600" fontSize="26px">GET THAT WORK!</Typography>
-    <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '40px' } }} mb="23px" mt="30px">
-      We Do, <br />
-      We Sweat, <br />
-      We Love
 
-    </Typography>
-    <Typography fontSize="22px" fontFamily="Alegreya" lineHeight="35px">
-      Learn the CORRECT way to do any exercise!<br />
-      Let's put in THAT WORK! NO INJURIES!
-    </Typography>
-    <Stack>
-      <a href="#exercises" style={{ marginTop: '45px', textDecoration: 'none', width: '200px', textAlign: 'center', background: '#FF2625', padding: '14px', fontSize: '22px', textTransform: 'none', color: 'white', borderRadius: '4px' }}>Check out some Exercises!</a>
-    </Stack>
-    <Typography fontWeight={600} color="#FF2625" sx={{ opacity: '0.1', display: { lg: 'block', xs: 'none' }, fontSize: '200px' }}>
-      Exercise
-    </Typography>
-    <img src={MainImage} alt="weights" className="main-image" />
-  </Box>
+  <div className='hero-container'>
+    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80" alt="weights" className="main-image" />
+    <h2 className='get-that-work'>GET THAT WORK!</h2>
+      <div className='text-container'>
+        <h3 className='we-do'>We <span className='green'>Do,</span>  We <span className='green'>Sweat,</span>  We <span className='green'>Love.</span></h3>
+      </div>
+      <div className='fitness-container'>
+        <img className='fitness' src={AFAAA} alt ="logo" />
+        <img className='fitness' src={NASM} alt="logo" />
+        <img className='fitness' src={ACE} alt="logo" />
+      </div>
+  </div>
+
 );
 
 export default HeroBanner;

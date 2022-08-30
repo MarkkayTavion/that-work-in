@@ -4,15 +4,15 @@ import { Box, Typography } from '@mui/material';
 
 import ExerciseCard from './ExerciseCard';
 import BodyPart from './BodyPart';
-import RightArrowIcon from '../assets/icons/right-arrow.png';
-import LeftArrowIcon from '../assets/icons/left-arrow.png';
+import {BsFillArrowRightCircleFill} from "react-icons/bs"
+import {BsFillArrowLeftCircleFill} from "react-icons/bs"
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
 
   return (
     <Typography onClick={() => scrollPrev()} className="left-arrow">
-      <img src={RightArrowIcon} alt="right-arrow" />
+      <BsFillArrowRightCircleFill className='arrow' />
     </Typography>
   );
 };
@@ -22,7 +22,7 @@ const RightArrow = () => {
 
   return (
     <Typography onClick={() => scrollNext()} className="right-arrow">
-      <img src={LeftArrowIcon} alt="right-arrow" />
+      <BsFillArrowLeftCircleFill className='arrow' />
     </Typography>
   );
 };
